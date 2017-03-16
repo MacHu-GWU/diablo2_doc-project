@@ -118,7 +118,8 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'nature'
+# html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -133,11 +134,11 @@ html_theme = 'sphinx_rtd_theme'
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+#html_short_title = Nonefile:///D:/Workspace/py34/py34_projects/diablo2_doc-project/build/html/02-%E4%BA%BA%E7%89%A9%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/02-%E5%85%A8%E8%A7%92%E8%89%B2%E6%8A%80%E8%83%BD/index.html
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "diablo_doc-logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

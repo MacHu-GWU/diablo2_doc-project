@@ -1,19 +1,14 @@
-Welcome to diable2_doc's documentation!
-=======================================
+.. include:: content.rst
 
-Table of Contents
 
+目录
+-------------------------------------------------------------------------------
 .. toctree::
    :maxdepth: 1
 
-   	UdieTool <UdieTool/index.rst>
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+    修改工具软件 <01-修改工具软件/index.rst>
+    人物相关资料 <02-人物相关资料/index.rst>
+    装备 <03-物品相关资料/index.rst>
+    雇佣兵资料 <05-雇佣兵资料/index.rst>
+    各种Build <06-各种Build/index.rst>
+    
