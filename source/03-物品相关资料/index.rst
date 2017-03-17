@@ -6,7 +6,8 @@
 .. toctree::
    :maxdepth: 1
 
-    装备上常用属性的效果解释 <01-装备上的常用属性效果解释/index.rst>
-    装备上的特殊属性效果解释 <02-装备上的特殊属性效果解释/index.rst>
+    基础资料查询 <01-基础资料查询/index.rst>
     NPC相关 <03-NPC相关/index.rst>
+    赫拉迪克方块 <04-赫拉迪克方块/index.rst>
+    物品掉落原理 <05-物品掉落原理/index.rst>
     
