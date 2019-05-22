@@ -1,3 +1,9 @@
+# User Settings
+diablo2_doc_venv/
+diablo2_doc.egg-info/
+diablo2_doc-*/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -24,6 +30,9 @@ var/
 .installed.cfg
 *.egg
 
+# PyCharm
+.idea/
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -40,6 +49,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+.pytest_cache/
 nosetests.xml
 coverage.xml
 *,cover
@@ -60,7 +70,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+docs/build/
 
 # PyBuilder
 target/
@@ -80,6 +90,8 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+
+
 
 # Spyder project settings
 .spyderproject
