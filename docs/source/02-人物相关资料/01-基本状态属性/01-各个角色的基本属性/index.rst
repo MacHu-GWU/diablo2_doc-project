@@ -1,5 +1,8 @@
+.. _各个角色的基本属性:
+
 各个角色的基本属性
 ===============================================================================
+
 缩略语:
 
 - Str: Strength, 力量.
@@ -15,143 +18,24 @@
 - L/V: Life Per Vitality, 每加一点Vit增加的生命.
 - M/E: Mana Per Energy, 每加一点Eng增加的法力.
 
-下表中的 Str,Dex,Vit,Eng,Sta,Life,Mana 都是各个角色起始的状态.
+下表中的 Str, Dex, Vit, Eng, Sta, Life, Mana 都是各个角色起始的状态.
 
-.. list-table:: 各角色起始状态的基础属性
-   :widths: 15 15 15 15 15 15 15 15 15 15 15 15 15 
-   :header-rows: 1
-   
-   * - 角色
-     - Str
-     - Dex
-     - Vit
-     - Eng
-     - Sta
-     - Life
-     - Mana
-     - L/L
-     - M/L
-     - S/L
-     - L/V
-     - M/E
-   * - Ama
-     - 20
-     - 25
-     - 20
-     - 15
-     - 84
-     - 50
-     - 15
-     - 2
-     - 1.5
-     - 1
-     - 3
-     - 1.5
-   * - Sor
-     - 10
-     - 25
-     - 10
-     - 35
-     - 74
-     - 40
-     - 35
-     - 1
-     - 2
-     - 1
-     - 2
-     - 2
-   * - Nec
-     - 15
-     - 25
-     - 15
-     - 25
-     - 79
-     - 45
-     - 25
-     - 1.5
-     - 2
-     - 1
-     - 2
-     - 2
-   * - Pal
-     - 25
-     - 20
-     - 25
-     - 15
-     - 89
-     - 55
-     - 15
-     - 2
-     - 1.5
-     - 1
-     - 3
-     - 1.5
-   * - Bar
-     - 30
-     - 20
-     - 25
-     - 10
-     - 92
-     - 55
-     - 10
-     - 2
-     - 1
-     - 1
-     - 4
-     - 1
-   * - Dru
-     - 15
-     - 20
-     - 25
-     - 20
-     - 84
-     - 55
-     - 20
-     - 1.5
-     - 2
-     - 1
-     - 2
-     - 2
-   * - Asn
-     - 20
-     - 20
-     - 20
-     - 25
-     - 95
-     - 50
-     - 25
-     - 2
-     - 1.5
-     - 1.25
-     - 3
-     - 1.75
+.. jinja:: doc_data
 
-各角色的基础命中率(Attack Rating)和防御力(Defence)
+    {{ doc_data.lt_base_stats_each_class.render() }}
+
+
+.. _各个角色的基础命中率和基础防御力:
+
+各角色的 基础命中率 (Attack Rating) 和 基础防御力 (Defence)
 -------------------------------------------------------------------------------
 
 ``Base_Attack_Rating`` = ``Dex`` * 5 - 35 + ``To_Hit_Factor``
 
-``To_Hit_Factor`` 为:
+``To_Hit_Factor`` 就是一个根据职业的固定修正值, 具体数值为:
 
-.. list-table:: 各角色的To_Hit_Factor
-   :widths: 15 15 15 15 15 15 15 15
-   :header-rows: 0
+.. jinja:: doc_data
 
-   * - class  
-     - Ama
-     - Sor
-     - Nec
-     - Pal
-     - Bar
-     - Dru
-     - Asn
-   * - Factor 
-     - 5 
-     - -15
-     - -10
-     - 20
-     - 20
-     - 5
-     - 15
+    {{ doc_data.lt_hit_factor_for_each_class.render() }}
 
-``Base_Defence`` = [``Dex`` / 4], 方括号表示向下取整数.
+``Base_Defence`` = [ ``Dex`` / 4 ], 方括号表示向下取整数.

@@ -3,6 +3,7 @@ diablo2_doc_venv/
 diablo2_doc.egg-info/
 diablo2_doc-*/
 
+*.tsv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
