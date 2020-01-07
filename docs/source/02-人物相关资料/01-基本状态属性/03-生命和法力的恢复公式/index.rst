@@ -4,30 +4,39 @@
 
 Replenish Life 公式
 -------------------------------------------------------------------------------
-- Replenish Life: 装备提供的恢复生命的属性的总和
-- Life Per Second: 每秒钟恢复的生命值
-- Life Per Second = 25 * Replenish_Life / 256
+
+定义:
+
+- ``Replenish_Life``: 装备提供的恢复生命的属性的总和
+- ``Life_Per_Second``: 每秒钟恢复的生命值
+- 公式: ``Life_Per_Second = 25 * Replenish_Life / 256 = 9.7% * Replenish_Life``
+- **总结: 每 1 点** ``Replenish_Life`` **属性 每秒 给人物回复约 0.1 点生命**
 
 血瓶加双倍血的几率 (Double Heal Chance):
 
 - 若 Vitality < 200: Double Heal Chance = (Vitality / 4)%
 - 若 Vitality >= 200: Double Heal Chance = (100 - (10000 / Vitality))%
+- 总结: 100 Vit = 25% 几率, 200 Vit = 50% 几率, 250 Vit = 60% 几率, 400 Vit = 75% 几率
 
 
 Mana Regeneration 公式
 -------------------------------------------------------------------------------
-- Mana Max: 人物的法力最大值
-- Mana Regeneration: 装备和技能提供的恢复法力的属性的总和
-- Mana Per Second: 每秒恢复的法力值
 
-[]: 方括号表示向下取整数
+定义:
 
-Mana_Per_Second = 25 * [[256 * Mana Max / (25 * 120)] * (100 + Mana Regeneration) / 100] / 256
+- ``Mana_Max``: 人物的法力最大值
+- ``Mana_Regeneration``: 装备和技能提供的恢复法力的属性的总和
+- ``Mana_Per_Second``: 每秒恢复的法力值
+- ``Mana_Perc_Per_Second``: 每秒恢复的法力值与法力上限的比例
+- 公式: ``Mana_Per_Second = 25 * [256 * Mana_Max / (25 * 120)] * (100 + Mana_Regeneration) / 100] / 256``; []: 方括号表示向下取整数
+- 简化公式: ``Mana_Perc_Per_Second =   (100 + Mana_Regeneration) / 120 Mana_Max ``
+- **总结: 无法力回复属性时, 每秒恢复约 0.83 % 法力; 当带有 1级 冥思灵气时, Mana_Regeneration = 300, 每秒恢复约 0.83 % 法力 3.33%; 当带有 12级 冥思灵气时 (眼光的下限), 每秒恢复约 5.625 % 法力; 当带有 12级 冥思灵气时 (眼光的下限), 每秒恢复约 5.625 % 法力, 当带有 12级 冥思灵气时 (眼光的下限), 每秒恢复约 6.667 % 法力. 80级基本成型的女法的法力达到 800 时 (Bo后), 在最差的眼光的作用下, 每秒恢复 45 点法力. 足够不断释放法术的了**.
 
 法力瓶加双倍法力的几率 (Double Mana Chance):
 
 - 若 Energy < 200: Double Mana Chance = (Energy / 4)%
 - 若 Energy >= 200: Double Mana Chance = (100 - (10000 / Energy))%
+- 总结: 100 Eng = 25% 几率, 200 Eng = 50% 几率, 250 Eng = 60% 几率, 400 Eng = 75% 几率
 
 
 血瓶和法力瓶对各个角色的作用
