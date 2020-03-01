@@ -10,8 +10,7 @@ sub packages and modules
 .. toctree::
     :maxdepth: 1
 
-    df_int <df_int>
+    helpers <helpers/__init__>
     _version <_version>
-    tsv_gz <tsv_gz>
     exp_func <exp_func>
     

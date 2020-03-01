@@ -18,7 +18,7 @@ def make_gzip(this_file, *parts):
     :type this_file: str
     :param this_file: 当前 python 脚本的文件全路径
 
-    :type parts: typing.List[str]
+    :type parts: str
     :param filename: ``.tsv`` 文件名
     """
     if not parts[-1].endswith(".tsv"):
@@ -39,8 +39,8 @@ def read_compressed_tsv(this_file, *parts):
     :type this_file: str
     :param this_file:
 
-    :type filename: str
-    :param filename: ``.tsv.gz`` 文件
+    :type parts: str
+    :param parts: ``.tsv.gz`` 文件
 
     :rtype: pd.DataFrame
     """

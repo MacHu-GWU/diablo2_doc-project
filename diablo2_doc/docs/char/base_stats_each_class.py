@@ -4,8 +4,8 @@ from diablo2_doc.helpers.df_int import df_to_list_table
 from diablo2_doc.helpers.tsv_gz import make_gzip, read_compressed_tsv
 
 tsv_filename = "base_stats_each_class.tsv"
-make_gzip(this_file=__file__, filename=tsv_filename)
-df = read_compressed_tsv(this_file=__file__, filename=tsv_filename + ".gz")
+make_gzip(__file__, tsv_filename)
+df = read_compressed_tsv(__file__, tsv_filename + ".gz")
 
 for c in df.columns:
     if c != "基础属性":
