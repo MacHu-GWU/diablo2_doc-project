@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+Data is from Google Sheet ``Diablo2-Data-Set``
+"""
+
 import logging
 
 try:

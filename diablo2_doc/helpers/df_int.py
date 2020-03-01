@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
+pandas.Dataframe integration
+
 This module helps transform pandas.DataFrame to Restructured Text List Table.
 It allows user to embed code block in the table.
 """
@@ -10,7 +12,7 @@ from pandas import DataFrame
 from rstobj.directives import ListTable, CodeBlockBase, CodeBlockPython, Code
 
 
-def convert_to_codeblock_python(value):
+def convert_to_codeblock_python(value: str) -> CodeBlockBase:
     """
     将字符串转化为 CodeBlockPython 对象.
     """
@@ -23,17 +25,14 @@ def convert_to_codeblock_python(value):
         return value
 
 
-def df_to_list_table(df, title="", code_column_and_transform_func=None):
+def df_to_list_table(df: DataFrame,
+                     title: str="",
+                     code_column_and_transform_func: Dict[str, Callable]=None) -> ListTable:
     """
     将 DataFrame 转化成 Rst 中的 List Table 对象.
 
-    :type df: DataFrame
     :param df:
-
-    :type title: str
     :param title: Title
-
-    :type code_column_and_transform_func: dict
     :param code_column_and_transform_func: key: column name, value: None,
         or a simple text transform function, should take a row as the single argument
 

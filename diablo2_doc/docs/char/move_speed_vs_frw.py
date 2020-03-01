@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from diablo2_doc.df_int import df_to_list_table
-from diablo2_doc.tsv_gz import make_gzip, read_compressed_tsv
+from diablo2_doc.helpers.df_int import df_to_list_table
+from diablo2_doc.helpers.tsv_gz import make_gzip, read_compressed_tsv
 
 tsv_filename = "move_speed_vs_frw.tsv"
 make_gzip(this_file=__file__, filename=tsv_filename)
